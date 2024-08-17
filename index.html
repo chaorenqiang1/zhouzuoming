@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC ">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E2A38; /* 深蓝色背景，提供一个更加现代和专业的外观 */
+}
+
+
+</style>
+
+<link type="text/css" rel="stylesheet" href="css/iview1.css" />
+<link type="text/css" rel="stylesheet" href="css/skin1/style1.css" />
+<link type="text/css" rel="stylesheet" href="css/bullet.css" /> <!-- 引入弹幕CSS文件 -->
+<link rel="stylesheet" href="banniang/css/pio.css">
+<link type="text/css" rel="stylesheet" href="css/播放.css" />
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/raphael-min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script type="text/javascript" src="js/iview.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#iview').iView({
+        pauseTime: 7000,
+        directionNav: false,
+        controlNav: true,
+        tooltipY: -15
+    });
+});
+</script>
+
+</head>
+<body>
+
+<div class="container">
+    <div id="iview">
+        <div data-iview:image="photos/photo1.jpg" data-iview:transition="slice-top-fade,slice-right-fade">
+            <div class="iview-caption caption1" data-x="80" data-y="200">周作民旧居</div>
+            <div class="iview-caption" data-x="80" data-y="275"data-width="100" data-transition="wipeRight">武康路117弄1号</div>
+        </div>
+
+        <div data-iview:image="photos/photo2.jpg" data-iview:transition="zigzag-drop-top,zigzag-drop-bottom" data-iview:pausetime="3000">
+            <div class="iview-caption caption5" data-x="60" data-y="280" data-transition="wipeDown">建筑为中西混合风格</div>
+            <div class="iview-caption caption6" data-x="300" data-y="350" data-transition="wipeUp">建于1943-1944年</div>
+        </div>
+
+        <div data-iview:image="photos/photo3.jpg" data-iview:type="video" data-iview:transition="strip-right-fade,strip-left-fade">
+            <iframe src="http://player.vimeo.com/video/11475955?byline=1&amp;portrait=0" width="100%" height="100%" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            <div class="iview-caption caption2" data-x="450" data-y="340" data-transition="wipeRight">3层砖木结构</div>
+            <div class="iview-caption caption3" data-x="600" data-y="345" data-transition="wipeLeft">总体布局整齐</div>
+        </div>
+
+        <div data-iview:image="photos/photo4.jpg">
+            <div class="iview-caption caption4" data-x="50" data-y="80" data-width="312" data-transition="fade">周作民旧居:</div>
+            <div class="iview-caption blackcaption" data-x="50" data-y="135" data-width="180" data-transition="wipeLeft" data-easing="easeInOutElastic">楼前辟有宽敞的回车场地和汽车库</div>
+            <div class="iview-caption blackcaption" data-x="50" data-y="192" data-width="180" data-transition="wipeLeft" data-easing="easeInOutElastic">层为起居室、餐厅、厨房和书房</div>
+            <div class="iview-caption blackcaption" data-x="50" data-y="249" data-width="180" data-transition="wipeLeft" data-easing="easeInOutElastic">左右低围墙上设中国式石狮</div>
+            <div class="iview-caption blackcaption" data-x="50" data-y="306" data-width="200" data-transition="wipeLeft" data-easing="easeInOutElastic">二层三层除了起居室外其余均是卧室</div>
+        </div>
+
+        <div data-iview:image="photos/photo5.jpg">
+            <div class="iview-caption caption7" data-x="0" data-y="0" data-width="180" data-height="480" data-transition="wipeRight">
+                <h3>武康路117弄1号</h3>
+                <p>此建筑原为金城银行总经理周作民（1881-1955）旧居，二十世纪五十年代以后，原全国人大常委会副委员长陈丕显、原中共中央华东局书记魏文伯先后在此居住。</p>
+            </div>
+        </div>
+
+        <div data-iview:image="photos/photo6.jpg">
+
+
+    </div>
+</div>
+    </div>
+
+    <audio id="backgroundMusic1" src="audio/周作民1.wav"></audio>
+    <div id="clickToPlay">点击开始旅行</div>
+
+<div class="danmaku-container"></div>
+<div class="pio-container left">
+    <div class="pio-action"></div>
+    <canvas id="pio" width="300" height="400"></canvas>
+</div>
+
+<script type="text/javascript" src="js/bullet.js"></script> <!-- 引入弹幕JavaScript文件 -->
+<script src="banniang/js/pio.js"></script>
+<script src="banniang/js/l2d.js"></script>
+<script src="js/播放.js"></script>
+<script>
+    var pio = new Paul_Pio({
+    "mode": "fixed",
+    "tips": true,
+    "hidden": true,
+    "content": {
+        "welcome": ["欢迎来旅行！", ],
+    },
+    "model": [
+     "banniang/live2d-widget-models/live2d-widget-model-shizuku/assets/shizuku.model.json",
+
+    ]
+});
+</script>
+
+</body>
+</html>
