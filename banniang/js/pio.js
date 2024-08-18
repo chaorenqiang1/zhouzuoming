@@ -143,7 +143,7 @@ var Paul_Pio = function (prop) {
                                      .catch(console.error) )
                   };
                  elements.sentence.onmouseover = function () {
-                     modules.render("欢迎大家来旅游，我将具体介绍故居的详情");
+                     modules.render("欢迎大家来体验沉浸之旅！");
                  };
                  current.menu.appendChild(elements.sentence);
 
