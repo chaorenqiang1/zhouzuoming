@@ -7,7 +7,6 @@
     background-color: transparent; /* 背景色透明 */
     color: white;
     font-size: 20px;
-    overflow: hidden;
     z-index: 1000; /* 确保弹幕在其他内容之上 */
 }
 
